@@ -1,0 +1,19 @@
+<head>
+<title> Sayfa Basligi </title>
+ <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+    <script>
+jQuery(document).ready(function ($) {
+    // Get page title
+    var pageTitle = $("title").text();
+
+    // Change page title on blur
+    $(window).blur(function () {
+        $("title").text(" Tekrar Gel :'( "); // TODO: Buradan Mesajı Değiştirin.
+    });
+
+    // Change page title back on focus
+    $(window).focus(function () {
+        $("title").text(pageTitle);
+    });
+});</script>
